@@ -1,0 +1,27 @@
+
+
+
+<div class="box">
+<h1>Dashboard</h1>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+  
+<input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+  
+<button onclick="tryLogin();">Click</button>
+
+
+  
+</div> <!-- End Box -->
+  
+
+
+<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
+<script>
+    var socket = io();
+    function tryLogin(){
+        socket.emit('insertToDatabase',{username:'ohad'});
+    }
+  
+  
+</script>
